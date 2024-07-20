@@ -33,12 +33,8 @@ go build .
 - [x] Read-only API
 - [x] CSRF protection
 - [x] Captcha
-- [ ] Post API using tokens
 - [ ] Admin functionality
-- [ ] Upload images and files
 - [ ] Tripcodes
 - [ ] password-based file/post deletion
 - [ ] Anti-spam/anti-flood
-- [ ] Docker & docker-compose
-- [ ] Dashboard
-- [ ] Feedback form
+- [ ] Markdown support
