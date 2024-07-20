@@ -1,14 +1,14 @@
 
 <p align="center">
-  <img width="192" height="192" src="https://user-images.githubusercontent.com/83316072/209536409-c691c252-3d12-4af2-93ab-e2278b9ff9b6.png">
+  <img width="192" height="192" src="https://github.com/user-attachments/assets/7eaf11c2-80f5-443a-956f-04393e7c58d5">
 </p>
 
-# **Goimbo** is a Go-powered textboard / imageboard engine
+~~# **Goimbo** is a Go-powered textboard / imageboard engine~~
 
-![Screenshot 2022-12-26 at 13-40-32 _c_ - Board C](https://user-images.githubusercontent.com/83316072/209534091-c05c4d4f-02cd-49f5-9f91-ff2601a6168d.png)
+This is a fork. It's going to be kept strictly as a textboard engine. 
 
 # Setup
-It is assumed that you already have Go and GIt installed, as well as the Postgres database.
+It is assumed that you already have Go and Git installed, as well as the Postgres database.
 
 1. Clone the repo
 ```bash
@@ -33,8 +33,8 @@ go build .
 - [x] Read-only API
 - [x] CSRF protection
 - [x] Captcha
+- [ ] Markdown support
 - [ ] Admin functionality
 - [ ] Tripcodes
 - [ ] password-based file/post deletion
 - [ ] Anti-spam/anti-flood
-- [ ] Markdown support
