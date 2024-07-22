@@ -64,7 +64,9 @@ func SetWebHandler(cfg *WebConfig) {
 			"res/templates/error.page.tmpl",
 		))
 	cfg.R.SetHTMLTemplate(tmpl)
+	cfg.R.Static("/static/images", "./res/static/images")
 	cfg.R.StaticFile("/styles.css", "./res/static/styles.css")
+	cfg.R.StaticFile("/fonts/ocr.ttf", "./res/static/fonts/ocr.ttf")
 	cfg.R.StaticFile("/favicon.ico", "./res/static/favicon.ico")
 	cfg.R.StaticFile("error_img.png", "./res/static/gopher_vojak_transparent.png")
 

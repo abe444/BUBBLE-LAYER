@@ -2,6 +2,7 @@ package handler
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 	"strconv"
 
@@ -118,7 +119,7 @@ func (h *WebHandler) reply(c *gin.Context) {
 		h.handleError(c, err)
 		return
 	}
-	com := c.PostForm("text")
+	com := template.HTMLEscapeString(c.PostForm("text"))
 	newPost, err := h.userspace.Reply(c.Request.Context(), board, com, thread)
 	if handled := h.handleError(c, err); handled {
 		return
@@ -128,7 +129,7 @@ func (h *WebHandler) reply(c *gin.Context) {
 
 func (h *WebHandler) newthread(c *gin.Context) {
 	board := c.Param("board")
-	com := c.PostForm("text")
+	com := template.HTMLEscapeString(c.PostForm("text"))
 	captchaID := c.PostForm("captchaId")
 	captchaSolution := c.PostForm("captchaSolution")
 	verified := captcha.VerifyString(captchaID, captchaSolution)

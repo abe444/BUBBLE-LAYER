@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"html/template"
 	"strings"
 )
@@ -18,7 +19,12 @@ func IntRange(n int) []int {
 	return res
 }
 
-// add line breakes
-func FormatBody(body string) template.HTML {
-	return template.HTML(strings.Replace(template.HTMLEscapeString(body), "\n", "<br>", -1))
+func FormatBody(input string) template.HTML {
+	lines := strings.Split(input, "\n")
+	for i, line := range lines {
+		if strings.HasPrefix(line, "&gt;") {
+			lines[i] = fmt.Sprintf("<span class=\"greentext\">%s</span>", line)
+		}
+	}
+	return template.HTML(strings.Join(lines, "<br>\n"))
 }
