@@ -33,8 +33,9 @@ go build .
 - [x] Read-only API
 - [x] CSRF protection
 - [x] Captcha
-- [ ] Markdown support
+- [x] Greentexting
+- [ ] Markdown file upload
+- [ ] Rate-limiter
 - [ ] Admin functionality
 - [ ] Tripcodes
 - [ ] password-based file/post deletion
-- [ ] Anti-spam/anti-flood
